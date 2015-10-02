@@ -128,3 +128,11 @@ button{
 	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 	cursor:pointer;
 }
+
+
+.normLink{
+text-decoration:none;
+color:#000000;
+cursor:pointer;
+}
+
