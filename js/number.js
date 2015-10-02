@@ -188,4 +188,5 @@ function compute(){
 };
 $(document).ready( function(){
 $("#headButt").hide();
+$("#headButt").css('z-index', 99);
 });
