@@ -127,6 +127,8 @@ function atEndBegin(){
 	if(!decTries){
 		end = maxDur;
 		begin = 0;
+		atEnd =  true;
+		atBegin = true;
 	};
 
 
