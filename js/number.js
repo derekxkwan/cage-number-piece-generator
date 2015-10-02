@@ -105,9 +105,12 @@ function secToStamp(ipt){
 
 function atEndBegin(){
 	var prop;
+	var decTries = end > (numSnd * numRpt);
 //I do this so that it doesn't have to start at 0'00" or at the specified ending, but within the ballpark
-	atEnd = coinFlip();
-	atBegin = coinFlip();
+	if (decTries){
+		atEnd = coinFlip();
+		atBegin = coinFlip();
+	};
 	if(!atEnd || !atBegin){
 	//ballpark = 10% of piece
 		prop = maxDur * 0.1;
