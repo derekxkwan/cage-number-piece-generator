@@ -2,7 +2,7 @@
 <head>
 <title>number piece generator</title>
 <link rel="stylesheet" href="style.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/number.js"></script>
 </head>
 
@@ -12,7 +12,6 @@
 	<span class="title">EIGHTEEN</span><br>
 	<span class="sub">JOHN CAGE NUMBER PIECE GENERATOR</span><br>
 	<div id="composer" class="spanner">DEREK KWAN</div>
-	<div class="spanner" id="cover"><br><br></div>
 	<div class="spanner" id="headButt"><button type="button" id="new" onclick="startAgain()">start again</button></div>
 	<br><br>
 </div>
@@ -50,9 +49,8 @@
 	<span class="sub">DESCRIPTION</span><br>
 
 	This website is an attempt to randomly generate a score in the style of a John Cage number piece using JavaScript and jQuery. The maximum duration slider dictates the maximum duration of the score desired. I have included coin flip random number generators to decide if the time brackets generated actually start at 0'00" or end with the maximum duration. However, the first timestamp of the piece and the last timestamp will not fall within the inner 80% of the desired duration (10% in, 10% left). The number of sounds slider specifies the number of sounds desired in the score while the number of repeated sounds slider dictates how many times any sound appears twice or more. <br> <br>
-	In generating the score, I first fill an array of integers 1-n inclusive, one for each sound. I then choose randomly from the array an integer to repeat, which is then pushed to the array. I then use the Fisher-Yates algorithm to shuffle this array. This results in the final ordering of the big numbers for each bracket. The duration array consists of four entries to every one of the entries in the sound array (four = two pairs of time stamps). These entries are integers corresponding to the eventual timestamps (m'ss") but in seconds. Before randomly generating the duration array's entries, I call a coin flip function to determine whether or not to start at 0'00" and whether to end at the maximum duration. In the generation of the array, I make sure that each random integer is unique (there are no duplicates in the array). After the array is generated, I use a quicksort algorithm to sort the array.
-		<br><br>More information about me or my projects can be found at <a href="http://www.derekxkwan.com" class="normLink"><b>www.derekxkwan.com</b></a>.
-
+	In generating the score, I first fill an array of integers 1-n inclusive, one for each sound. I then choose randomly from the array an integer to repeat, which is then pushed to the array. I then use the Fisher-Yates algorithm to shuffle this array. This results in the final ordering of the big numbers for each bracket. The duration array consists of four entries to every one of the entries in the sound array (four = two pairs of time stamps). These entries are integers corresponding to the eventual timestamps (m'ss") but in seconds. Before randomly generating the duration array's entries, I call a coin flip function to determine whether or not to start at 0'00" and whether to end at the maximum duration. In the generation of the array, I make sure that each random integer is unique (there are no duplicates in the array). After the array is generated, I use a quicksort algorithm to sort the array.<br><br>
+	More information about me or my projects can be found at <a href="http://www.derekxkwan.com" class="normLink"><b>www.derekxkwan.com</b></a>.
 	<br>
 </div>
 </div>
