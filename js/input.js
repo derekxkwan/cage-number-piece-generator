@@ -28,6 +28,7 @@ function gen(){
 	maxDur = $("#dur").val();
 	numSnd = $("#numSnd").val();
 	numRpt = $("#numRpt").val();
+	end = maxDur;
 	compute();
 	$("#param").css('z-index', 1);
 	$("#directions").css('z-index', 1);
