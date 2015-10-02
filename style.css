@@ -72,16 +72,13 @@ background:white;
 text-align:right;
 }
 
-#headButt,#cover{
+#headButt{
 position:absolute;
 }
 #headButt{
-z-index:-1;
+z-index:99;
 }
 
-#cover{
-z-index:99
-}
 
 input[type=range]{
 	width: 75%;
@@ -129,10 +126,8 @@ button{
 	cursor:pointer;
 }
 
-
 .normLink{
 text-decoration:none;
 color:#000000;
 cursor:pointer;
 }
-
