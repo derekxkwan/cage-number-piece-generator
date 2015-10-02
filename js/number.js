@@ -122,7 +122,12 @@ function atEndBegin(){
 	if(!atBegin){
 		begin += parseInt(Math.random()*prop);
 	};
-
+	var len = end - begin;
+	decTries = len > (numRpt * numSnd);
+	if(!decTries){
+		end = maxDur;
+		begin = 0;
+	};
 
 
 
@@ -137,7 +142,7 @@ function makeDurs(){
 	for(var i=1;i<((numArr.length*4)-1);i++){
 		var curTries = numTries;
 		var randDur = parseInt(Math.random() * (len + 0.1))+begin;
-		var decTries = end > (numSnd * numRpt);
+		var decTries = len > (numSnd * numRpt);
 		while(durArr.indexOf(randDur) >= 0 && curTries > 0){
 			randDur = parseInt(Math.random() * (len+0.1))+begin;
 			if(decTries){
