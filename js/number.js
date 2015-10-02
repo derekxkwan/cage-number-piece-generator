@@ -5,6 +5,7 @@ var atEnd = true;
 var end = maxDur;
 var atBegin = true;
 var begin = 0;
+var numTries = 10;
 
 //var numRpt = parseInt( Math.random()*(0.25*numSnd));
 var numArr = [];
@@ -131,9 +132,14 @@ function makeDurs(){
 	durArr.push(end);
 	var len = end - begin;
 	for(var i=1;i<((numArr.length*4)-1);i++){
+		var curTries = numTries;
 		var randDur = parseInt(Math.random() * (len + 0.1))+begin;
-		while(durArr.indexOf(randDur) >= 0){
+		var decTries = end > (numSnd * numRpt);
+		while(durArr.indexOf(randDur) >= 0 && curTries > 0){
 			randDur = parseInt(Math.random() * (len+0.1))+begin;
+			if(decTries){
+				curTries--;
+			};
 
 		};
 		durArr.push(randDur);
