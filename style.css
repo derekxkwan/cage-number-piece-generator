@@ -76,7 +76,7 @@ text-align:right;
 position:absolute;
 }
 #headButt{
-z-index:99;
+z-index:-1;
 }
 
 
