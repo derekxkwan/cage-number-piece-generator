@@ -42,6 +42,7 @@ function startAgain(){
 	numArr = [];
 	addStr = "";
 	durArr = [];
+	begin = 0;
 	$("#music").html("");
 	$("#param").css('z-index', 99);
 	$("#directions").css('z-index', 99);
