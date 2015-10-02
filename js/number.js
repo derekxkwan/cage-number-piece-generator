@@ -127,12 +127,13 @@ function atEndBegin(){
 
 function makeDurs(){
 	//randomly generating all the timestamps for the brackets
-	durArr.push(0);
+	durArr.push(begin);
 	durArr.push(end);
+	var len = end - begin;
 	for(var i=1;i<((numArr.length*4)-1);i++){
-		var randDur = parseInt(Math.random() * end);
+		var randDur = parseInt(Math.random() * (len + 0.1))+begin;
 		while(numArr.indexOf(randDur) >= 0){
-			randDur = parseInt(Math.random() * end);
+			randDur = parseInt(Math.random() * (len+0.1))+begin;
 
 		};
 		durArr.push(randDur);
