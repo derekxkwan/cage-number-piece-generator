@@ -187,4 +187,5 @@ function compute(){
 	makeScore();
 };
 $(document).ready( function(){
+$("#headButt").hide();
 });
