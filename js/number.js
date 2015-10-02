@@ -132,7 +132,7 @@ function makeDurs(){
 	var len = end - begin;
 	for(var i=1;i<((numArr.length*4)-1);i++){
 		var randDur = parseInt(Math.random() * (len + 0.1))+begin;
-		while(numArr.indexOf(randDur) >= 0){
+		while(durArr.indexOf(randDur) >= 0){
 			randDur = parseInt(Math.random() * (len+0.1))+begin;
 
 		};
