@@ -31,9 +31,10 @@ function gen(){
 	compute();
 	$("#param").css('z-index', 1);
 	$("#directions").css('z-index', 1);
+	$("#directions").hide();
 	$("#music").css('z-index', 99);
-	$("#cover").css('z-index', -1);
 	$("#headButt").css('z-index', 99);
+	$("#headButt").show();
 };
 
 function startAgain(){
@@ -43,9 +44,10 @@ function startAgain(){
 	$("#music").html("");
 	$("#param").css('z-index', 99);
 	$("#directions").css('z-index', 99);
+	$("#directions").hide();
 	$("#music").css('z-index', 1);
-	$("#cover").css('z-index', 99);
 	$("#headButt").css('z-index', -1);
+	$("#headButt").show();
 	
 };
 
